@@ -1,39 +1,42 @@
 waf binary --extract my_executable.exe
 
 # Si un archivo ejecutable (.exe) ha sido creado a partir de un código 
-escrito en Python utilizando el módulo pyinstaller, el archivo ejecutable (.exe) 
-contendrá el código Python en formato bytecode compilado, junto con un cargador 
-de arranque que permite ejecutar el código Python en una máquina que no tiene 
-instalado Python. Además, el archivo ejecutable (.exe) también podría contener
-otros archivos y directorios necesarios para la ejecución del programa, como 
-bibliotecas y recursos.
+# escrito en Python utilizando el módulo pyinstaller, el archivo ejecutable (.exe) 
+# contendrá el código Python en formato bytecode compilado, junto con un cargador 
+# de arranque que permite ejecutar el código Python en una máquina que no tiene 
+# instalado Python. Además, el archivo ejecutable (.exe) también podría contener
+# otros archivos y directorios necesarios para la ejecución del programa, como 
+# bibliotecas y recursos.
 
 # Si se desempaqueta un archivo ejecutable (.exe) creado a partir de un código 
-escrito en Python utilizando el módulo pyinstaller, se encontrarán los siguientes 
-archivos y directorios:
 
 # Un archivo con el mismo nombre que el archivo ejecutable (.exe), pero sin la 
-extensión .exe, que contiene el código Python en formato bytecode compilado.
-Un directorio llamado pyi-windows-manifest-filename, que contiene un archivo 
-llamado manifest-filename que especifica la versión de Python utilizada para 
-crear el archivo ejecutable (.exe).
+# escrito en Python utilizando el módulo pyinstaller, se encontrarán los siguientes 
+
+# archivos y directorios:
+
+# extensión .exe, que contiene el código Python en formato bytecode compilado.
+
+# Un directorio llamado pyi-windows-manifest-filename, que contiene un archivo 
+# llamado manifest-filename que especifica la versión de Python utilizada para 
+# crear el archivo ejecutable (.exe).
 
 # Un directorio llamado pyi-archives, que contiene archivos .pkg que son archivos 
-comprimidos que contienen los archivos y directorios necesarios para la ejecución 
-del programa Python.
+# comprimidos que contienen los archivos y directorios necesarios para la ejecución 
+# del programa Python.
 
-# # Un directorio llamado pyi-python35.dll, que contiene la biblioteca dinámica de Python 
-(python35.dll) necesaria para ejecutar el código Python en el sistema.
+# Un directorio llamado pyi-python35.dll, que contiene la biblioteca dinámica de Python 
+# (python35.dll) necesaria para ejecutar el código Python en el sistema.
 
-# # Un directorio llamado pyi-python35.lib, que contiene el archivo de biblioteca estática
-de Python (python35.lib) necesario para compilar el código Python en el sistema.
+# Un directorio llamado pyi-python35.lib, que contiene el archivo de biblioteca estática
+# de Python (python35.lib) necesario para compilar el código Python en el sistema.
 
 # Un archivo llamado pyi-warn-log.txt, que contiene información sobre cualquier advertencia
-generada durante el proceso de creación del archivo ejecutable (.exe).
+# generada durante el proceso de creación del archivo ejecutable (.exe).
 
 # Estos son los archivos y directorios que se encontrarían al desempaquetar un archivo
-ejecutable (.exe) creado a partir de un código escrito en Python utilizando el módulo
-pyinstaller. Sin embargo, es posible que el archivo ejecutable (.exe) contenga otros 
-archivos y directorios además de los mencionados aquí, dependiendo de la configuración
-utilizada al crear el archivo ejecutable (.exe) y de los recursos utilizados por el 
-programa Python.
+# ejecutable (.exe) creado a partir de un código escrito en Python utilizando el módulo
+# pyinstaller. Sin embargo, es posible que el archivo ejecutable (.exe) contenga otros 
+# archivos y directorios además de los mencionados aquí, dependiendo de la configuración
+# utilizada al crear el archivo ejecutable (.exe) y de los recursos utilizados por el 
+# programa Python.
