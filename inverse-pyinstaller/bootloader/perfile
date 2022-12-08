@@ -1,0 +1,25 @@
+import pefile
+
+# Abre el archivo ejecutable (`.exe`) en modo lectura.
+with open("my_executable.exe", "rb") as f:
+    # Crea un objeto "pe" a partir del archivo ejecutable (`.exe`).
+    pe = pefile.PE(data=f.read())
+
+# Obtén la información del sistema operativo utilizado para crear el archivo ejecutable (`.exe`).
+print(pe.OPTIONAL_HEADER.Subsystem)
+
+# Obtén la versión de Python utilizada para crear el archivo ejecutable (`.exe`).
+print(pe.VS_FIXEDFILEINFO.ProductVersion)
+
+# De esta forma puedes detectar el sistema operativo (MacOS, Linux, Windows ..) y la versión Python
+# que necesitaras para ejecutar los archivos extraidos.
+
+# En el código anterior, se abre el archivo ejecutable (.exe) en modo lectura y se crea un objeto 
+# pe a partir del contenido del archivo. Luego, se accede a la información del sistema operativo 
+# y la versión de Python utilizada para crear el archivo ejecutable (.exe) a través de las propiedades 
+# OPTIONAL_HEADER.Subsystem y VS_FIXEDFILEINFO.ProductVersion del objeto pe, respectivamente.
+
+
+# Ten en cuenta que el código anterior es solo un ejemplo de cómo utilizar el módulo pefile para obtener 
+# información del sistema operativo y la versión de Python utilizada para crear un archivo ejecutable 
+# (.exe) creado con pyinstaller. 
