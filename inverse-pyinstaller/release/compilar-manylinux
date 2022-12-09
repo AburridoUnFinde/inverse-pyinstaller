@@ -1,0 +1,23 @@
+#! /usr/bin/env bash
+set -e
+
+# Define la lista de plataformas que se desean hacer compatibles con Python
+plataformas=( \
+    manylinux2014_x86_64 manylinux_1_1_x86_64\
+    manylinux2014_i686 manylinux_1_1_i686 \
+    manylinux2014_aarch64 manylinux_1_1_aarch64 \
+    manylinux2014_ppc64le manylinux_1_1_ppc64le \
+    manylinux2014_s390x manylinux_1_1_s390x \
+)
+
+# Ejecuta QEMU para habilitar la compatibilidad de la arquitectura de las imágenes
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+
+# Itera sobre cada plataforma en la lista
+for platform in "${plataformas[@]}"
+do
+    # Construye una imagen Docker para la plataforma especificada
+    docker build -t pyi-$platform --build-arg BASE=quay.io/pypa/$platform ./bootloader
+    # Ejecuta la imagen Docker creada y monta el directorio actual en /io en el contenedor
+    docker run -v "$PWD:/io" -t pyi-$platform
+done
