@@ -6,6 +6,6 @@ setup(
     description="Convierte .exe en .py",
     author="AburridoUnFinde",
     author_email="",
-    packages=["mi_paquete"],
+    packages=["inverse-pyinstaller"],
     install_requires=["numpy"],
 )
